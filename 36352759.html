@@ -1,0 +1,905 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>java面向对象(初级) | thestar0のicu病房</title><meta name="keywords" content="java"><meta name="author" content="thestar0"><meta name="copyright" content="thestar0"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="面向对象(初级)（oop） 类（程序员自己定义的数据类型） 通过类可以创建各种各样的对象 1234567891011121314151617181920212223242526272829303132333435363738&#x2F;** * @Auther: thestar * @Date: 2022&#x2F;1&#x2F;24 - 01 -  - 17:54 * @Description: PACKAGE_NAME *">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java面向对象(初级)">
+<meta property="og:url" content="https://thestar0.icu/36352759.html">
+<meta property="og:site_name" content="thestar0のicu病房">
+<meta property="og:description" content="面向对象(初级)（oop） 类（程序员自己定义的数据类型） 通过类可以创建各种各样的对象 1234567891011121314151617181920212223242526272829303132333435363738&#x2F;** * @Auther: thestar * @Date: 2022&#x2F;1&#x2F;24 - 01 -  - 17:54 * @Description: PACKAGE_NAME *">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0080oZvvly1gyvvnogf7sj34f32y7u0y.jpg">
+<meta property="article:published_time" content="2022-01-30T10:28:12.000Z">
+<meta property="article:modified_time" content="2022-04-17T12:17:11.740Z">
+<meta property="article:author" content="thestar0">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0080oZvvly1gyvvnogf7sj34f32y7u0y.jpg"><link rel="shortcut icon" href="https://s2.loli.net/2022/01/12/BmChESeqoO2PfuA.jpg"><link rel="canonical" href="https://thestar0.icu/36352759"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//s4.cnzz.com"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4befb21c51ae2ef985988b315cfda829";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-304513644"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-304513644');
+</script><script async="async" data-pjax="data-pjax" src="https://s4.cnzz.com/z_stat.php?id=1280885975&amp;web_id=1280885975"></script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "aq861mdxr0");</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"简","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":30,"position":"top","messagePrev":"本文上次更新距离今天已经过去","messageNext":"天, 文中内容可能已经过时，望周知。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: thestar0","link":"链接: ","source":"来源: thestar0のicu病房","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'java面向对象(初级)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2022-04-17 20:17:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3143436_5yhqbf5gvy.css"><link rel="stylesheet" href="/css/twikoo_beautify.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/bilibiliBanner.css"  media="defer" onload="this.media='screen'"><link rel="stylesheet" href="/css/fixed_comment.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/aplayerdiy.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_3143436_g445de4qio8.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/aplayerdiy.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="thestar0のicu病房" type="application/atom+xml">
+</head><body><a href="javascript:void(0);" onclick="preloader.endLoading();" title="闭上眼睛狂点鼠标可加速,不信?thestar0不骗中国人"><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="wizard-scene"><div class="wizard-objects"><div class="wizard-square"></div><div class="wizard-circle"></div><div class="wizard-triangle"></div></div><div class="wizard"><div class="wizard-body"></div><div class="wizard-right-arm"><div class="wizard-right-hand"></div></div><div class="wizard-left-arm"><div class="wizard-left-hand"></div></div><div class="wizard-head"><div class="wizard-beard"></div><div class="wizard-face"><div class="wizard-adds"></div></div><div class="wizard-hat"><div class="wizard-hat-of-the-hat"></div><div class="wizard-four-point-star --first"></div><div class="wizard-four-point-star --second"></div><div class="wizard-four-point-star --third"></div></div></div></div></div></div></a><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2022/01/12/97jCqlWHTgbJMia.jpg" onerror="onerror=null;src='https://i.loli.net/2021/07/24/Gn6tpIirC8hlXQy.png'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-fsux_tubiao_shijianzhoutu"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags"><i class="fa-fw iconfont icon-_biaoqian-"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-fenlei"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw iconfont icon-liuyanban"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-shouzhangben"></i><span> 友人账</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-ziwojieshao"></i><span> to me</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-list"></i><span> 朋友圈</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://tva1.sinaimg.cn/large/0080oZvvly1gyvvnogf7sj34f32y7u0y.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">thestar0のicu病房</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-fsux_tubiao_shijianzhoutu"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags"><i class="fa-fw iconfont icon-_biaoqian-"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-fenlei"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw iconfont icon-liuyanban"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-shouzhangben"></i><span> 友人账</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-ziwojieshao"></i><span> to me</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-list"></i><span> 朋友圈</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="autumnBanner"><div><img src="/bilibiliBanner/autumn/bilibili-autumn-1.png"></div><div><img src="/bilibiliBanner/autumn/bilibili-autumn-2.png"></div><div><img src="/bilibiliBanner/autumn/bilibili-autumn-3.png"></div><div><img src="/bilibiliBanner/autumn/bilibili-autumn-4.png"></div><div><img src="/bilibiliBanner/autumn/bilibili-autumn-5.png"></div><div><img src="/bilibiliBanner/autumn/bilibili-autumn-6.png"></div></div><script async data-pjax src="/js/bilibili-banner.js"></script><div id="post-info"><h1 class="post-title">java面向对象(初级)<a class="post-edit-link" href="https://github.com/thestarx_posts/java/java面向对象（初级）.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-30T10:28:12.000Z" title="发表于 2022-01-30 18:28:12">2022-01-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-17T12:17:11.740Z" title="更新于 2022-04-17 20:17:11">2022-04-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/java/">java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="java面向对象(初级)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>面向对象(初级)（oop）</h1>
+<p>类（程序员自己定义的数据类型）</p>
+<p>通过类可以创建各种各样的对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: thestar</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/1/24 - 01 -  - 17:54</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: PACKAGE_NAME</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 使用OPP面向对象解决问题*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">object</span> </span>&#123;</span><br><span class="line">    <span class="comment">//创建一只猫对象</span></span><br><span class="line">    <span class="comment">//new cat()创建一只猫对象</span></span><br><span class="line"><span class="comment">//    cat cat1 = new cat();把创建的猫赋给cat1,所以第一只猫叫cat1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这是一个main方法：是程序的入口：</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        cat cat1 = <span class="keyword">new</span> cat();<span class="comment">//创建第一只猫(对象)</span></span><br><span class="line">        cat1.name = <span class="string">&quot;小白&quot;</span>;</span><br><span class="line">        cat1.age = <span class="number">3</span>;</span><br><span class="line">        cat1.color = <span class="string">&quot;白色&quot;</span>;</span><br><span class="line">        cat1.weight = <span class="number">12.1</span>;</span><br><span class="line">        cat cat2 = <span class="keyword">new</span> cat();<span class="comment">//创建第二只猫（对象）</span></span><br><span class="line">        cat2.name = <span class="string">&quot;小花&quot;</span>;</span><br><span class="line">        cat2.age = <span class="number">100</span>;</span><br><span class="line">        cat2.color = <span class="string">&quot;花色&quot;</span>;</span><br><span class="line"><span class="comment">//        怎么访问对象的属性呢</span></span><br><span class="line">        System.out.println(<span class="string">&quot;第一只猫的信息&quot;</span> + cat1.name + <span class="string">&quot; &quot;</span> + cat1.age + <span class="string">&quot; &quot;</span> + cat1.color + <span class="string">&quot; &quot;</span> + cat1.weight);</span><br><span class="line">        System.out.println(<span class="string">&quot;第一只猫的信息&quot;</span> + cat2.name + <span class="string">&quot; &quot;</span> + cat2.age + <span class="string">&quot; &quot;</span> + cat2.color);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">cat</span></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    String color;</span><br><span class="line">    <span class="keyword">double</span> weight;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220124182012450.png" alt=""></p>
+<h2 id="对象在内存中的存在形式">对象在内存中的存在形式</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat cat1 = new cat();</span><br><span class="line">String name = &quot;小白&quot;;</span><br><span class="line">int age = 10;</span><br><span class="line">String color = &quot;白色&quot;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220124183955569.png" alt=""></p>
+<p>属性 （也叫成员变量）有的叫field(字段)</p>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220124184531855.png" alt=""></p>
+<p>属性可以是基本数据类型，也可以是引用数据类型（数组和对象）</p>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220124184922574.png" alt=""></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: thestar</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/1/24 - 01 -  - 18:53</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: PACKAGE_NAME</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Properties</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这是一个main方法：是程序的入口：</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//创建一个Person对象</span></span><br><span class="line"><span class="comment">//        person1是对象名(对象的引用</span></span><br><span class="line"><span class="comment">//        new Person() 创建的对象空间（数据）这才是真正的对象</span></span><br><span class="line">     Person  person1  = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="comment">//     对象的属性默认值，遵守数组规则：</span></span><br><span class="line">        System.out.println(<span class="string">&quot;当前这个人的信息：&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;age: &quot;</span> + person1.age + <span class="string">&quot;name: &quot;</span> + person1.name + <span class="string">&quot;sal: &quot;</span> + person1.sal + <span class="string">&quot;inPass: &quot;</span> + person1.isPass);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">double</span> sal;</span><br><span class="line">    <span class="keyword">boolean</span> isPass;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="创建对象两种方法">创建对象两种方法</h2>
+<p>第一种：先创建，然后</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cat cat;</span><br><span class="line">cat = new Cat();</span><br></pre></td></tr></table></figure>
+<p>第二种：直接创建</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cat cat = new cat();</span><br></pre></td></tr></table></figure>
+<h2 id="类和对象的内存分配机制">类和对象的内存分配机制</h2>
+<p>java内存的结构分析</p>
+<ol>
+<li>栈： 一般存放基本数据类型（局部变量）</li>
+<li>堆： 存放对象（Cat cat,数组等）</li>
+<li>方法区：常量池（常量,字符串）,类加载信息</li>
+<li>示意图：Cat[name,age等]</li>
+</ol>
+<p>Java创建对象的流程简单分析</p>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220125001756193.png" alt=""></p>
+<h2 id="方法调用机制">方法调用机制</h2>
+<ol>
+<li>
+<p>当程序执行到方法时，就会开辟一个独立的空间（栈空间）</p>
+</li>
+<li>
+<p>当一个方法执行完毕，或者执行到return语句时，就会返回</p>
+</li>
+<li>
+<p>返回到调用方法的的地方</p>
+</li>
+<li>
+<p>返回后，继续执行剩下的代码</p>
+</li>
+<li>
+<p>当主方法main(main栈)执行完毕，整个程序退出</p>
+</li>
+</ol>
+<h2 id="成员方法的好处">成员方法的好处</h2>
+<ul>
+<li>提高代码的复用性</li>
+<li>可以将实现的细节封装起来，然后供其他用户来调用</li>
+</ul>
+<h2 id="成员方法的定义">成员方法的定义</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public（访问修饰符） 返回数据类型 方法名（形参列表……）&#123;//方法体</span><br><span class="line">  语句；</span><br><span class="line">  return 返回值；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>形参列表：表示成员方法输入 <code>getSum（int num1,int num2）</code></li>
+<li>返回数据类型：表示成员方法输出，数据类型为void 表示没有返回值</li>
+<li>方法主体 :表示为了实现某一功能代码块</li>
+<li>return语句不是必须的（void的时候就不用）</li>
+</ol>
+<h2 id="成员方法注意事项和使用细节">成员方法注意事项和使用细节</h2>
+<blockquote>
+<p>访问修饰符（作用是控制方法使用的范围）</p>
+<p>有四种[1.不写(默认访问),2.public,3.private,4protected]</p>
+</blockquote>
+<blockquote>
+<p>返回数据类型</p>
+<ol>
+<li>一个方法最多有一个返回值（可以通过数组返回多个返回值，就是返回数据类型是数组）</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: thestar</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/1/25 - 01 -  - 1:13</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: PACKAGE_NAME</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mythod3</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这是一个main方法：是程序的入口：</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        AA aa = <span class="keyword">new</span> AA();</span><br><span class="line">        <span class="keyword">int</span>[]c = aa.a(<span class="number">1</span>,<span class="number">4</span>);</span><br><span class="line">        System.out.println(c[<span class="number">0</span>]);</span><br><span class="line">        System.out.println(c[<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AA</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[]a(<span class="keyword">int</span> num1,<span class="keyword">int</span> num2)&#123;</span><br><span class="line">        <span class="keyword">int</span>[]b = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        b[<span class="number">0</span>] = num1 + num2;</span><br><span class="line">        b[<span class="number">1</span>]  = num1 - num2;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>返回类型可以为任何类型，包含基本类型或者引用类型（数组和对象）</li>
+<li>如果方法要求有返回数据类型，则方法体中最后的执行语句必须为 return 值; 而且要求返回值类型必须和 return 的 值类型一致或兼容</li>
+<li>如果方法是 void，则方法体中可以没有 return 语句，或者只写 return ;</li>
+</ol>
+<p>方法名：遵循驼峰命名法，最好见名知意，表达出该功能的意思即可, 比如得到两个数的和 getSum, 开发中按照规范</p>
+<p>实际开发中，我们的方法都是为了完成某个功能，所以方法名一定要有含义，最好是见名知意</p>
+</blockquote>
+<blockquote>
+<p>参数列表</p>
+<ol>
+<li>一个方法可以有0个参数，也可以有多个参数，中间用逗号隔开，比如<code>getSum(int n1,int n2,int n3)</code></li>
+<li>参数类型可以为任意类型，包含基本类型和引用类型（数组和对象），比如<code>printArr(int[][] map)</code></li>
+<li>调用带参数的方法时，一定对应着参数列表传入相同类型或者兼容类型的参数！</li>
+<li>方法定义时的参数称为形式参数，简称形参；方法调用时传入的参数称为实际参数，简称实参，实参和形参的类型要一致兼容，个数和顺序必须一致</li>
+</ol>
+<p>方法体</p>
+<p>里面写完成功能的具体的语句，可以为输入，输出，变量，运算，分支，循环，方法调用，但里面不能定义方法！即方法不能嵌套定义，可以嵌套使用但不能嵌套定义</p>
+</blockquote>
+<blockquote>
+<p>方法调用细节说明</p>
+<ol>
+<li>同一个类中的方法调用：直接调用即可。比如print(参数)；</li>
+</ol>
+<p>eg：A类sayOK调用print()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: thestar</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/1/25 - 01 -  - 2:02</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: PACKAGE_NAME</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">tao</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这是一个main方法：是程序的入口：</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    A a = <span class="keyword">new</span> A();</span><br><span class="line">    a.sayOK();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">    <span class="comment">//同一个类中的方法调用即可</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;print方法被调用 n=&quot;</span>+ n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayOK</span><span class="params">()</span></span>&#123;</span><br><span class="line">        print(<span class="number">10</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;继续执行sayOK()~~~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>跨类中的方法A类调用B类方法：需要通过对象名调用。比如对象名.方法名（参数）</li>
+</ol>
+<p>eg: B类sayHello调用print()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: thestar</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/1/25 - 01 -  - 2:02</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: PACKAGE_NAME</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">tao</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这是一个main方法：是程序的入口：</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    A a = <span class="keyword">new</span> A();</span><br><span class="line">    a.sayOK();</span><br><span class="line">    a.m1();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">    <span class="comment">//同一个类中的方法调用即可</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;print方法被调用 n=&quot;</span>+ n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayOK</span><span class="params">()</span></span>&#123;</span><br><span class="line">        print(<span class="number">10</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;继续执行sayOK()~~~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//跨类中的方法A类调用B类方法：需要通过对象名调用</span></span><br><span class="line">    <span class="comment">//在调用方法里面创建被调用方法所在类的对象，然后再调用方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;mi()方法被调用~~~&quot;</span>);</span><br><span class="line">        <span class="comment">//先创建B对象,然后再调用方法即可</span></span><br><span class="line">        B b = <span class="keyword">new</span> B();</span><br><span class="line">        b.hi();</span><br><span class="line">        System.out.println(<span class="string">&quot;mi()方法被执行~~~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hi</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;B类中的hi()被执行&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>跨类的方法调用和方法的访问修饰符相关</li>
+</ol>
+</blockquote>
+<h2 id="写方法时候的思路">写方法时候的思路</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//方法思路</span><br><span class="line">    /*</span><br><span class="line">    * 1. 方法返回类型 </span><br><span class="line">    * 2. 方法的名字</span><br><span class="line">    * 3. 方法的形参</span><br><span class="line">    * 4. 方法体</span><br><span class="line">    * */</span><br></pre></td></tr></table></figure>
+<p>eg</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: thestar</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/1/25 - 01 -  - 2:23</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: PACKAGE_NAME</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">work1</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这是一个main方法：是程序的入口：</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        A1 a = <span class="keyword">new</span> A1();</span><br><span class="line">        <span class="keyword">if</span>(a.isOdd(<span class="number">2</span>))&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;是奇数&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;是偶数&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A1</span></span>&#123;</span><br><span class="line">    <span class="comment">//方法思路</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 1. 方法返回类型: boolean</span></span><br><span class="line"><span class="comment">    * 2. 方法的名字: isOdd</span></span><br><span class="line"><span class="comment">    * 3. 方法的形参: (int num)</span></span><br><span class="line"><span class="comment">    * 4. 方法体 判断num的奇偶性</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isOdd</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line"><span class="comment">//        if(num % 2 != 0)&#123;</span></span><br><span class="line"><span class="comment">//         return true;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//        else&#123;</span></span><br><span class="line"><span class="comment">//            return false;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line">        <span class="comment">//return num % 2 != 0? true:false;</span></span><br><span class="line">        <span class="keyword">return</span> num % <span class="number">2</span> != <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>编写类 AA ，有一个方法：判断一个数是奇数 odd 还是偶数, 返回 boolean类型</p>
+<p>根据行、列、字符打印 对应行数和列数的字符，比如：行：4，列：4，字符#,则打印相应的效果</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: thestar</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/1/25 - 01 -  - 2:23</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: PACKAGE_NAME</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">work1</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这是一个main方法：是程序的入口：</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        A1 a = <span class="keyword">new</span> A1();</span><br><span class="line">        <span class="keyword">if</span>(a.isOdd(<span class="number">2</span>))&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;是奇数&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;是偶数&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        a.print(<span class="number">4</span>,<span class="number">5</span>,<span class="string">&#x27;#&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A1</span></span>&#123;</span><br><span class="line">    <span class="comment">//方法思路</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 1. 方法返回类型: boolean</span></span><br><span class="line"><span class="comment">    * 2. 方法的名字: isOdd</span></span><br><span class="line"><span class="comment">    * 3. 方法的形参: (int num)</span></span><br><span class="line"><span class="comment">    * 4. 方法体 判断num的奇偶性</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isOdd</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line"><span class="comment">//        if(num % 2 != 0)&#123;</span></span><br><span class="line"><span class="comment">//         return true;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//        else&#123;</span></span><br><span class="line"><span class="comment">//            return false;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line">        <span class="comment">//return num % 2 != 0? true:false;</span></span><br><span class="line">        <span class="keyword">return</span> num % <span class="number">2</span> != <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//方法思路</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 1. 方法返回类型: void</span></span><br><span class="line"><span class="comment">     * 2. 方法的名字: print</span></span><br><span class="line"><span class="comment">     * 3. 方法的形参: (int row,int col,char c)</span></span><br><span class="line"><span class="comment">     * 4. 方法体 打印需要的字符形状</span></span><br><span class="line"><span class="comment">     * */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span> <span class="params">(<span class="keyword">int</span> row,<span class="keyword">int</span> col,<span class="keyword">char</span> c)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row ; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; col; j++) &#123;</span><br><span class="line">                System.out.print(c);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="成员方法传参机制">成员方法传参机制</h2>
+<p>参数是基本数据类型：</p>
+<p>基本数据类型，传递的是值（值拷贝），形参的任何改变不影响实参！</p>
+<p>参数是引用数据类型：</p>
+<p>引用数据类型，传递是地址（传递的也是值，不过这个值是地址），可以通过形参影响实参！</p>
+<h2 id="方法递归调用">方法递归调用</h2>
+<p>递归重要规则</p>
+<ol>
+<li>执行一个方法时，就创建一个新的受保护的独立空间（栈空间）</li>
+<li>方法的局部变量是独立的，不会相互影响，比如n的变量</li>
+<li>如果方法中使用的是引用类型变量（比如数组），就会共享该引用类型的数据</li>
+<li>递归必须向退出递归的条件逼近，否则就会无限递归，出现</li>
+<li>当一个方法执行完毕，或者遇到return，就会返回，遵守谁调用，就将结果返回给谁，同时当方法执行完毕或者返回时，改方法也就执行完毕</li>
+</ol>
+<h2 id="方法重载">方法重载</h2>
+<p>java 中允许同一个类中，多个同名方法的存在，但要求形参列表不一致！</p>
+<p>方法重载的好处</p>
+<ol>
+<li>
+<p>减轻了起名的麻烦</p>
+</li>
+<li>
+<p>减轻了记名的麻烦</p>
+</li>
+</ol>
+<h2 id="重载使用细节">重载使用细节</h2>
+<ul>
+<li>方法名必须相同</li>
+<li>形参列表，必须不同（形参类型或个数或顺序，至少有一个不同，参数名无要求）</li>
+<li>返回类型，无要求</li>
+</ul>
+<h2 id="可变参数">可变参数</h2>
+<p>java 允许将同一个类中多个<strong style="color:red;">同名</strong><span style="background:#bbffff;">同功能</span>但<span style="background:#FFDBBB;">参数个数不同</span>的方法，封装成一个方法。</p>
+<p>就可以通过可变参数实现</p>
+<h3 id="使用语法">使用语法</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">访问修饰符 返回类型 方法名(数据类型... 形参名) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>唯一变了的地方就是三个…</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.sun.org.apache.xpath.internal.operations.Variable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.lang.model.element.VariableElement;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: thestar</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/1/29 - 01 -  - 17:38</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: PACKAGE_NAME</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">variable</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这是一个main方法：是程序的入口：</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        YY M = <span class="keyword">new</span> YY();</span><br><span class="line"></span><br><span class="line">        System.out.println(M.sum(<span class="number">1</span>,<span class="number">5</span>,<span class="number">1010</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">YY</span></span>&#123;</span><br><span class="line">   <span class="comment">/* public int sum(int n1,int n2)&#123;</span></span><br><span class="line"><span class="comment">        return n1 + n2;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    public int sum(int n1,int n2,int n3)&#123;</span></span><br><span class="line"><span class="comment">        return n1 + n2 + n3;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    public int sum(int n1,int n2,int n3,int n4)&#123;</span></span><br><span class="line"><span class="comment">        return n1 + n2 + n3 + n4;</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">    <span class="comment">/*上面三个方法名称相同，功能相同，参数个数不同---&gt;使用可变参数优化*/</span></span><br><span class="line">    <span class="comment">/*1. int... 表示接受的是可变参数，类型是 int ,即可以接收多个 int(0--多)可接受0个也可以接受多个参数</span></span><br><span class="line"><span class="comment">    * 2. 使用可变参数时，可以当做数组来使用 即 nums 可以当做数组</span></span><br><span class="line"><span class="comment">    * 3. 遍历 nums 求和即可</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span>... nums)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;接受的参数个数：&quot;</span> + nums.length);</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            res += nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="可变参数注意事项和使用细节">可变参数注意事项和使用细节</h2>
+<ul>
+<li>可变参数的实参可以为0个或者多个</li>
+<li>可变参数的实参可以为数组</li>
+<li>可变参数的本质就是数组</li>
+<li>可变参数可以和普通类型的参数一起放在形参列表，但必须保证可变参数在最后</li>
+<li>一个形参列表中只能出现一个可变参数</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @Auther: thestar</span><br><span class="line"> * @Date: 2022/1/29 - 01 -  - 18:05</span><br><span class="line"> * @Description: PACKAGE_NAME</span><br><span class="line"> * @version: 1.0</span><br><span class="line"> */</span><br><span class="line">public class variable1 &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 这是一个main方法：是程序的入口：</span><br><span class="line">     */</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] arr = &#123;1,2,34,5&#125;;</span><br><span class="line">        N B2 =new N();</span><br><span class="line">        B2.B1(arr);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class N&#123;</span><br><span class="line">    public void B1(int... nums)&#123;</span><br><span class="line">        System.out.println(&quot;可变参数的长度&quot;+ nums.length);</span><br><span class="line">    &#125;</span><br><span class="line">    public void B2(String name,double... nums)&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="作用域">作用域</h2>
+<ol>
+<li>在java编程中，主要的变量就是属性（成员变量）和局部变量</li>
+<li>我们说的局部变量一般（代码块里面也有自己的局部变量）是指在成员方法中定义的变量。</li>
+<li>java中的作用域的分类
+<ul>
+<li>全局变量：也就是属性（成员变量），作用域为整个类体</li>
+<li>局部变量：也就是除了属性之外的其他变量，作用域为定义它的代码块中</li>
+</ul>
+</li>
+<li>全局变量（属性）可以不赋值,直接使用，因为有默认值，局部变量必须赋值后，才能使用，因为没有默认值</li>
+</ol>
+<h2 id="作用域的注意事项和细节使用">作用域的注意事项和细节使用</h2>
+<ol>
+<li>属性和局部变量可以重名，访问时遵循就近原则。<img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129184436558.png" alt=""></li>
+<li>在同一作用域中，比如在同一个成员方法中，两个局部变量，不能重名。<img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129184612332.png" alt=""></li>
+<li>==属性生命周期较长==，伴随着对象的创建而创建，伴随着对象的销毁而销毁。局部变量，生命周期较短，伴随着它的代码块的执行而创建，伴随着代码块的结束而销毁。即在一次方法调用过程中。</li>
+<li>作用域范围不同
+<ul>
+<li>全局变量/属性：可以被被本类使用，或其他类使用（通过对象调用）</li>
+<li>局部变量 ：只能在本类中的对应的方法中使用</li>
+</ul>
+</li>
+<li>修饰符不同
+<ul>
+<li>全局变量/属性可以加修饰符</li>
+<li>局部变量不可以加修饰符</li>
+</ul>
+</li>
+</ol>
+<h2 id="构造器">构造器</h2>
+<h3 id="基本语法">基本语法</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] 方法名(形参列表)&#123;</span><br><span class="line">方法体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>构造器的修饰符可以默认，</p>
+</li>
+<li>
+<p>也可以是 public protected private</p>
+</li>
+<li>
+<p>构造器没有返回值</p>
+</li>
+<li>
+<p>方法名 和类名字必须一样</p>
+</li>
+<li>
+<p>参数列表 和 成员方法一样的规则</p>
+</li>
+<li>
+<p>构造器的调用, 由系统完成</p>
+</li>
+</ol>
+<h3 id="基本介绍">基本介绍</h3>
+<blockquote>
+<p>构造方法又叫构造器(constructor)，是类的一种特殊的方法，它的主要作用是完成对新对象的初始化。</p>
+</blockquote>
+<h4 id="它的特点">它的特点</h4>
+<ol>
+<li>方法名和类名相同</li>
+<li>没有返回值</li>
+<li>在创建对象时，系统会自动的调用该类的构造器完成对象的初始化</li>
+</ol>
+<h2 id="构造器的注意事项和使用细节">构造器的注意事项和使用细节</h2>
+<ol>
+<li>一个类可以定义多个不同的构造器，即构造器重载</li>
+<li>构造器名和类名要相同</li>
+<li>构造器没有返回值</li>
+<li>构造器是完成对象的初始化，并不是创建对象</li>
+<li>在创建对象时，系统自动的调用该类的构造方法</li>
+<li>如果程序员没有定义构造器，系统会自动给类生成一个默认无参构造器（也叫默认构造器）==可以用javap指令反编译看看==</li>
+<li>一旦定义了自己的构造器，默认的构造器就覆盖了，就不能再使用默认的无参构造器，除非显式的定义一下</li>
+</ol>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129192828845.png" alt="系统默认的构造器"></p>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129192903518.png" alt="自己创建的构造器"></p>
+<h2 id="对象创建的流程">对象创建的流程</h2>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129194702550.png" alt=""></p>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129194727460.png" alt=""></p>
+<h2 id="流程分析">流程分析</h2>
+<ol>
+<li>加载person类的信息（person.class）只会加载一次</li>
+<li>在堆中分配内存空间（地址）</li>
+<li><span style="background:#BBFFBB;">完成对象的初始化</span></li>
+</ol>
+<ul>
+<li>默认初始化 age=0,name=null</li>
+<li>显示初始化 age=90,name=null</li>
+<li>构造器初始化 age=20,name=小倩</li>
+</ul>
+<ol start="4">
+<li>在对象在堆中的地址，返回给p（p是对象名，可以理解为对对象的引用）</li>
+</ol>
+<h2 id="this关键字">this关键字</h2>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129195859117.png" alt=""></p>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129200724127.png" alt=""></p>
+<blockquote>
+<p>使用hashcode看一下对象的情况</p>
+</blockquote>
+<p><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220129200854248.png" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import static java.awt.SystemColor.info;</span><br><span class="line"></span><br><span class="line">public class Dog&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">            Dog1 dog2 = new Dog1(&quot;lili&quot;);</span><br><span class="line">            System.out.println(dog2.hashCode());</span><br><span class="line">            dog2.info();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Dog1&#123;</span><br><span class="line">    String name;</span><br><span class="line">    public Dog1(String name)&#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        System.out.println(this.hashCode());</span><br><span class="line">    &#125;</span><br><span class="line">    public void info()&#123;//成员方法,输出属性 x 信息</span><br><span class="line">        System.out.println(&quot;this.hashCode=&quot; + this.hashCode());</span><br><span class="line">        System.out.println(name + &quot;\t&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以将哈希值当成对象地址（但不是真的）</p>
+</blockquote>
+<blockquote>
+<p>简单说，那个对象调用this,this就代表那个对象</p>
+</blockquote>
+<h2 id="this使用细节和注意事项">this使用细节和注意事项</h2>
+<ol>
+<li>this 关键字可以用来访问本类的属性、方法、构造器</li>
+<li>this 用于区分当前类的属性和局部变量</li>
+<li>访问成员方法的语法：this.方法名(参数列表);</li>
+<li>访问构造器语法： <strong style="color:red;">注意只能在构造器中使用(即只能在构造器中访问另外一个构造器, 必须放在第一条语句) </strong></li>
+<li>this 不能在类定义的外部使用，只能在类定义的方法中使用。</li>
+</ol>
+</article><div class="business-center"><div class="business-card"><div class="business-flip"><div class="business-front"><div class="business-strip-bottom"></div><div class="business-strip-top"></div><img class="business-logo" width="80" height="80" src="https://tva1.sinaimg.cn/large/0080oZvvly1h193rmup65j30cw0cu0x0.jpg" alt="cardcode"><div class="business-Invitation">Invitation</div><div class="business-chip"><div class="business-chip-line"></div><div class="business-chip-line"></div><div class="business-chip-line"></div><div class="business-chip-line"></div><div class="business-chip-main"></div></div><svg class="business-wave" viewBox="0 3.71 26.959 38.787" width="26.959" height="38.787" fill="white"><path d="M19.709 3.719c.266.043.5.187.656.406 4.125 5.207 6.594 11.781 6.594 18.938 0 7.156-2.469 13.73-6.594 18.937-.195.336-.57.531-.957.492a.9946.9946 0 0 1-.851-.66c-.129-.367-.035-.777.246-1.051 3.855-4.867 6.156-11.023 6.156-17.718 0-6.696-2.301-12.852-6.156-17.719-.262-.317-.301-.762-.102-1.121.204-.36.602-.559 1.008-.504z"></path><path d="M13.74 7.563c.231.039.442.164.594.343 3.508 4.059 5.625 9.371 5.625 15.157 0 5.785-2.113 11.097-5.625 15.156-.363.422-1 .472-1.422.109-.422-.363-.472-1-.109-1.422 3.211-3.711 5.156-8.551 5.156-13.843 0-5.293-1.949-10.133-5.156-13.844-.27-.309-.324-.75-.141-1.114.188-.367.578-.582.985-.542h.093z"></path><path d="M7.584 11.438c.227.031.438.144.594.312 2.953 2.863 4.781 6.875 4.781 11.313 0 4.433-1.828 8.449-4.781 11.312-.398.387-1.035.383-1.422-.016-.387-.398-.383-1.035.016-1.421 2.582-2.504 4.187-5.993 4.187-9.875 0-3.883-1.605-7.372-4.187-9.875-.321-.282-.426-.739-.266-1.133.164-.395.559-.641.984-.617h.094zM1.178 15.531c.121.02.238.063.344.125 2.633 1.414 4.437 4.215 4.437 7.407 0 3.195-1.797 5.996-4.437 7.406-.492.258-1.102.07-1.36-.422-.257-.492-.07-1.102.422-1.359 2.012-1.075 3.375-3.176 3.375-5.625 0-2.446-1.371-4.551-3.375-5.625-.441-.204-.676-.692-.551-1.165.122-.468.567-.785 1.051-.742h.094z"></path></svg><div class="business-card-number"><div class="business-section">thestar0</div><div class="business-section">1020226732</div></div><div class="business-end"><span class="business-end-text">created:</span><span class="business-end-date">03/29/2022</span></div><div class="business-card-holder">Welcome to 摆烂绝不卷群</div><div class="business-master"><div class="business-circle business-master-red"></div><div class="business-circle business-master-yellow">   </div></div></div><div class="business-back"><div class="business-strip-black"></div><div class="business-ccv"><label>sitelink</label><div><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=CgiPFd0A">点击链接加入群聊【摆烂绝不卷】</a></div></div><div class="business-terms"><p>Use this card to join the 摆烂绝不卷群 and 一起进步 .</p><p>Welcome to thestar0's icu病房,wish you a nice day .</p></div></div></div></div></div><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>java面向对象(初级)</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://thestar0.icu/36352759.html">https://thestar0.icu/36352759.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>thestar0</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2022-01-30</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2022-04-17</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java/">java</a></div><div class="post_share"><div class="social-share" data-image="https://tva1.sinaimg.cn/large/0080oZvvly1gyvvnogf7sj34f32y7u0y.jpg" data-sites="facebook,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">打赏</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://s2.loli.net/2022/01/12/3sVP7AIUhGHQa56.png" target="_blank"><img class="post-qr-code-img" src="https://s2.loli.net/2022/01/12/3sVP7AIUhGHQa56.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://s2.loli.net/2022/01/12/CnluvfzgZtBR5I7.png" target="_blank"><img class="post-qr-code-img" src="https://s2.loli.net/2022/01/12/CnluvfzgZtBR5I7.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://unpkg.zhimg.com/akilar-candyassets@1.0.16/audio/coin.mp3"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/74e9e141.html"><img class="prev-cover" src="https://s2.loli.net/2022/02/11/dAhDSY9Wkgz1KoF.jpg" onerror="onerror=null;src='/private_img/favicon.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">java面向对象（中级）</div></div></a></div><div class="next-post pull-right"><a href="/b37651.html"><img class="next-cover" src="https://pic.imgdb.cn/item/61e96bb42ab3f51d919e4107.jpg" onerror="onerror=null;src='/private_img/favicon.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo搭建博客</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Livere</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NTM4OC8zMTg1NQ=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2022/01/12/97jCqlWHTgbJMia.jpg" onerror="this.onerror=null;this.src='https://i.loli.net/2021/07/24/Gn6tpIirC8hlXQy.png'" alt="avatar"/></div><div class="author-info__name">thestar0</div><div class="author-info__description">抱200%的热枕</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" href="/"><i></i><span>打回原形</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/thestarx" target="_blank" title="Github"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-fill"></use></svg></a><a class="social-icon" href="https://gitee.com/thestar0" target="_blank" title="Gitee"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2841810250&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-QQ"></use></svg></a><a class="social-icon" href="https://space.bilibili.com" target="_blank" title="Bilibili"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili"></use></svg></a><a class="social-icon" href="mailto:thestar0icu@gmail.com" target="_blank" title="Email"><i class="fa-fw fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/thesat?spm=1000.2115.3001.5343" target="_blank" title="csdn"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-csdn"></use></svg></a><a class="social-icon" href="https://music.163.com/#/user/home?id=1685854135" target="_blank" title="网易云音乐"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wangyiyun"></use></svg></a><a class="social-icon" href="https://www.zhihu.com/people/xiao-peng-you-ye-51" target="_blank" title="知乎"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shejiaotubiao-46"></use></svg></a><a class="social-icon" href="https://www.douyin.com/user/MS4wLjABAAAAqdADMUxk9zpytub5yyQVM4g_ERrYIaYS5lEcKXEMpGo" target="_blank" title="抖音"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-douyin"></use></svg></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">努力的意义就是好运来临的时候我觉得我值得</div></div><div class="card-widget"><div class="item-headline"><i></i><span></span></div><div class="item-content"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">面向对象(初级)（oop）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E5%AD%98%E5%9C%A8%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">对象在内存中的存在形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">创建对象两种方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%9C%BA%E5%88%B6"><span class="toc-number">1.3.</span> <span class="toc-text">类和对象的内存分配机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%E6%9C%BA%E5%88%B6"><span class="toc-number">1.4.</span> <span class="toc-text">方法调用机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">1.5.</span> <span class="toc-text">成员方法的好处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.6.</span> <span class="toc-text">成员方法的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E5%92%8C%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82"><span class="toc-number">1.7.</span> <span class="toc-text">成员方法注意事项和使用细节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E6%96%B9%E6%B3%95%E6%97%B6%E5%80%99%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="toc-number">1.8.</span> <span class="toc-text">写方法时候的思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%E4%BC%A0%E5%8F%82%E6%9C%BA%E5%88%B6"><span class="toc-number">1.9.</span> <span class="toc-text">成员方法传参机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8"><span class="toc-number">1.10.</span> <span class="toc-text">方法递归调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="toc-number">1.11.</span> <span class="toc-text">方法重载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E8%BD%BD%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82"><span class="toc-number">1.12.</span> <span class="toc-text">重载使用细节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="toc-number">1.13.</span> <span class="toc-text">可变参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%AD%E6%B3%95"><span class="toc-number">1.13.1.</span> <span class="toc-text">使用语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E5%92%8C%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82"><span class="toc-number">1.14.</span> <span class="toc-text">可变参数注意事项和使用细节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.15.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E5%92%8C%E7%BB%86%E8%8A%82%E4%BD%BF%E7%94%A8"><span class="toc-number">1.16.</span> <span class="toc-text">作用域的注意事项和细节使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">1.17.</span> <span class="toc-text">构造器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.17.1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.17.2.</span> <span class="toc-text">基本介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%83%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.17.2.1.</span> <span class="toc-text">它的特点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E5%92%8C%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82"><span class="toc-number">1.18.</span> <span class="toc-text">构造器的注意事项和使用细节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B"><span class="toc-number">1.19.</span> <span class="toc-text">对象创建的流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-number">1.20.</span> <span class="toc-text">流程分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.21.</span> <span class="toc-text">this关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.22.</span> <span class="toc-text">this使用细节和注意事项</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最近文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/fe29e5fb.html" title="计算机组成原理复习笔记"><img src="https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/1653888797724.jpg.jpg" onerror="this.onerror=null;this.src='/private_img/favicon.png'" alt="计算机组成原理复习笔记"/></a><div class="content"><a class="title" href="/fe29e5fb.html" title="计算机组成原理复习笔记">计算机组成原理复习笔记</a><time datetime="2022-06-14T04:36:26.586Z" title="更新于 2022-06-14 12:36:26">2022-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/338ebf9b.html" title="国赛部分wp"><img src="https://tva1.sinaimg.cn/large/0080oZvvly1h2q9y7681aj31h60zgtdw.jpg" onerror="this.onerror=null;this.src='/private_img/favicon.png'" alt="国赛部分wp"/></a><div class="content"><a class="title" href="/338ebf9b.html" title="国赛部分wp">国赛部分wp</a><time datetime="2022-05-30T05:13:17.820Z" title="更新于 2022-05-30 13:13:17">2022-05-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/9b646969.html" title="复现Z3巧解逆向"><img src="https://tva1.sinaimg.cn/large/0080oZvvly1h2pqp9xfeij31hc0z7q5v.jpg" onerror="this.onerror=null;this.src='/private_img/favicon.png'" alt="复现Z3巧解逆向"/></a><div class="content"><a class="title" href="/9b646969.html" title="复现Z3巧解逆向">复现Z3巧解逆向</a><time datetime="2022-05-29T16:29:34.098Z" title="更新于 2022-05-30 00:29:34">2022-05-30</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://tva1.sinaimg.cn/large/0080oZvvly1gyvvnogf7sj34f32y7u0y.jpg')"><div id="footer-wrap"><div class="copyright"><span>&copy;2022</span><svg style="width:1.5em; height:1.5em" aria-hidden="true"><use xlink:href="#icon-Butterfly"></use></svg><span>thestar0</span></div><div class="footer_custom_text">要成为一个不知去向的英雄吗？</div></div><div id="workboard"></div><script async="async" src="/js/runtime.js">   </script></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="to_comment" type="button" title="直达评论" onclick="FixedCommentBtn();"><i class="fas fa-comments"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: '[object Object]',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-five-kohl.vercel.app/',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-five-kohl.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo@1.4.18/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Twikoo' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo-five-kohl.vercel.app/',
+        region: '',
+        pageSize: 5,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo@1.4.18/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="/js/custom/floatpanel.js"></script><script defer src="/live2d-widget/autoload.js"></script><script async src="//at.alicdn.com/t/font_2264842_3izu8i5eoc2.js"></script><script async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script><script async src="/js/diytitle.js"></script><script async src="/js/grayscale.js"></script><script async data-pjax src="/js/custom/floatpanel.js"></script><script defer src="/js/fixed_comment.js"></script><script async src="///at.alicdn.com/t/font_3143436_5yhqbf5gvy.js"></script><div class="aplayer no-destroy" data-id="7247797851" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><script data-pjax async src="//at.alicdn.com/t/font_2264842_3izu8i5eoc2.js"></script><script data-pjax async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script><script data-pjax async src="/js/diytitle.js"></script><script data-pjax defer src="/live2d-widget/autoload.js"></script><script data-pjax async src="/js/grayscale.js"></script><script data-pjax async data-pjax src="/js/custom/floatpanel.js"></script><script data-pjax defer src="/js/fixed_comment.js"></script><script data-pjax async src="//at.alicdn.com/t/font_3143436_5yhqbf5gvy.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(function(d, w, c) {
+    w.ChatraID = '9e7LS6gR3kNejKciq';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
+
+if (true) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      Chatra('openChat')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      Chatra('hide')
+    }
+    function chatBtnShow () {
+      Chatra('show')
+    }
+  }
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.staticfile.org/jquery.pjax/0.9/jquery.pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  "#fixedcard-dashboard",
+  '#posts-chart',
+  '#tags-chart',
+  '#categories-chart',
+  '.js-pjax'
+]
+
+if (true) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"]):not([href="/artitalk/"]):not([href="/about/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'UA-304513644', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?thestarx";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="thestarx";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='/'|| '/' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><i class="fas fa-comments"></i><span><a href="/artitalk/" title="artitalk page link">碎碎念</a></span><a id="cardVisual" style="cursor:pointer;float:right" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: '4ItKmH1a6Wi51CWgd2aVkIT0-MdYXbMMI',
+          appKey: 'V7BpWcaXHJe56qu6a8gpctL6',
+        }, {"serverURL":"https://4ItKmH1a.api.lncldglobal.com","lang":"zh","pageSize":1,"color1":"#49b1f5","color2":"#00c4b6","atEmoji":{"Mafumafu1":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png","Mafumafu2":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://unpkg.zhimg.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/artitalk/,/posts/'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    card_artitalk_injector_config();
+  }
+  else if (epage === cpage){
+    card_artitalk_injector_config();
+  }
+  </script><script async src="https://unpkg.zhimg.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><div id="ghbdages" style="overflow:hidden;max-height:90px;height:auto;text-align:center;margin-top:10px"><div class="swiper-wrapper"><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v5.4.0"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v3.8.2"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，默认线路托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用双线部署，联通线路托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&amp;logo=Codio" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/thestarx" style="margin-inline:5px" title="本站项目由Github托管"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></div><div class="swiper-slide"><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></div></div></div><style>a.github-badge:hover:before {display:none}</style>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="/js/runtime.js"></script><script defer src="https://unpkg.zhimg.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js"></script><script defer src="https://unpkg.zhimg.com/jquery@latest/dist/jquery.min.js"></script><script defer src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/cfb8545f.html" alt=""><img width="48" height="48" src="https://s2.loli.net/2022/01/12/QkUhtL9bfTewsu4.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-01-10</span><a class="blog-slider__title" href="/cfb8545f.html" alt="">逆向基础一</a><div class="blog-slider__text">菜鸡文章，不看白不看！</div><a class="blog-slider__button" href="/cfb8545f.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/47ac6548.html" alt=""><img width="48" height="48" src="https://s2.loli.net/2022/02/17/pKn3jYhEtwG5Ffc.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-02-17</span><a class="blog-slider__title" href="/47ac6548.html" alt="">雷军的大学创业失败经历</a><div class="blog-slider__text">菜鸡文章，不看白不看！</div><a class="blog-slider__button" href="/47ac6548.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/74e9e141.html" alt=""><img width="48" height="48" src="https://s2.loli.net/2022/02/11/dAhDSY9Wkgz1KoF.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-02-11</span><a class="blog-slider__title" href="/74e9e141.html" alt="">java面向对象（中级）</a><div class="blog-slider__text">菜鸡文章，不看白不看！</div><a class="blog-slider__button" href="/74e9e141.html" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://unpkg.zhimg.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://unpkg.zhimg.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '1s');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '2');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('wowpanels');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://unpkg.zhimg.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://unpkg.zhimg.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>

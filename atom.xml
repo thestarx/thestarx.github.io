@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>thestar0のicu病房</title>
+  <icon>https://thestar0.icu/icon.png</icon>
+  <subtitle>喻言</subtitle>
+  <link href="https://thestar0.icu/atom.xml" rel="self"/>
+  
+  <link href="https://thestar0.icu/"/>
+  <updated>2022-06-14T04:36:26.586Z</updated>
+  <id>https://thestar0.icu/</id>
+  
+  <author>
+    <name>thestar0</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机组成原理复习笔记</title>
+    <link href="https://thestar0.icu/fe29e5fb.html"/>
+    <id>https://thestar0.icu/fe29e5fb.html</id>
+    <published>2022-06-14T02:14:33.000Z</published>
+    <updated>2022-06-14T04:36:26.586Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;计算机组成原理复习笔记&lt;/h1&gt;
+&lt;h2 id=&quot;1-完整描述CPU取一条指令的过程。（可参考下面图片）&quot;&gt;1.完整描述CPU取一条指令的过程。（可参考下面图片）&lt;/h2&gt;
+&lt;aside&gt;
+💡</summary>
+        
+      
+    
+    
+    
+    
+    <category term="课程笔记" scheme="https://thestar0.icu/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>国赛部分wp</title>
+    <link href="https://thestar0.icu/338ebf9b.html"/>
+    <id>https://thestar0.icu/338ebf9b.html</id>
+    <published>2022-05-30T05:07:50.000Z</published>
+    <updated>2022-05-30T05:13:17.820Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://thestar0-1308426403.cos.ap-chengdu.myqcloud.com/img/image-20220530113631303.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="比赛wp" scheme="https://thestar0.icu/categories/%E6%AF%94%E8%B5%9Bwp/"/>
+    
+    
+    <category term="比赛wp" scheme="https://thestar0.icu/tags/%E6%AF%94%E8%B5%9Bwp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复现Z3巧解逆向</title>
+    <link href="https://thestar0.icu/9b646969.html"/>
+    <id>https://thestar0.icu/9b646969.html</id>
+    <published>2022-05-29T16:09:33.000Z</published>
+    <updated>2022-05-29T16:29:34.098Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;Z3巧解逆向&lt;/h1&gt;
+&lt;p&gt;源文件：&lt;a href=&quot;https://wwu.lanzouj.com/ihKfb05mj9ri&quot;&gt;https://wwu.lanzouj.com/ihKfb05mj9ri&lt;/a&gt;&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="reverse" scheme="https://thestar0.icu/categories/reverse/"/>
+    
+    
+    <category term="reverse" scheme="https://thestar0.icu/tags/reverse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>z3约束器一把梭</title>
+    <link href="https://thestar0.icu/4dd2f681.html"/>
+    <id>https://thestar0.icu/4dd2f681.html</id>
+    <published>2022-05-15T03:45:32.000Z</published>
+    <updated>2022-05-15T04:55:48.577Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;项目介绍&quot;&gt;项目介绍&lt;/h2&gt;
+&lt;p&gt;Z3 是 Microsoft Research</summary>
+        
+      
+    
+    
+    
+    <category term="reverse" scheme="https://thestar0.icu/categories/reverse/"/>
+    
+    
+    <category term="reverse" scheme="https://thestar0.icu/tags/reverse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker</title>
+    <link href="https://thestar0.icu/f255ffad.html"/>
+    <id>https://thestar0.icu/f255ffad.html</id>
+    <published>2022-05-07T17:00:33.000Z</published>
+    <updated>2022-05-07T17:01:35.572Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="docker" scheme="https://thestar0.icu/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言字符串处理函数</title>
+    <link href="https://thestar0.icu/8461793b.html"/>
+    <id>https://thestar0.icu/8461793b.html</id>
+    <published>2022-05-07T09:37:45.000Z</published>
+    <updated>2022-05-07T09:57:25.606Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;c语言字符串处理函数&lt;/h1&gt;
+&lt;h2 id=&quot;strcpy-；函数&quot;&gt;&lt;em&gt;strcpy()；函数&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;结构：&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="c语言" scheme="https://thestar0.icu/tags/c%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>逆向常见加密算法和编码识别</title>
+    <link href="https://thestar0.icu/74946e20.html"/>
+    <id>https://thestar0.icu/74946e20.html</id>
+    <published>2022-05-04T07:00:41.000Z</published>
+    <updated>2022-05-04T07:07:51.583Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;Base64&lt;/h1&gt;
+&lt;p&gt;Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6</summary>
+        
+      
+    
+    
+    
+    <category term="reverse" scheme="https://thestar0.icu/categories/reverse/"/>
+    
+    
+    <category term="reverse" scheme="https://thestar0.icu/tags/reverse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BUUCTF pwn刷题日记</title>
+    <link href="https://thestar0.icu/37a5e329.html"/>
+    <id>https://thestar0.icu/37a5e329.html</id>
+    <published>2022-04-15T16:54:36.000Z</published>
+    <updated>2022-04-16T04:44:21.398Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;test_YOUr_NC&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;非常简单，单纯是测试nc连接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="比赛wp" scheme="https://thestar0.icu/categories/%E6%AF%94%E8%B5%9Bwp/"/>
+    
+    
+    <category term="CTF" scheme="https://thestar0.icu/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>汇编常见指令</title>
+    <link href="https://thestar0.icu/bfc7703e.html"/>
+    <id>https://thestar0.icu/bfc7703e.html</id>
+    <published>2022-04-05T08:42:33.000Z</published>
+    <updated>2022-04-14T04:21:27.294Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;指令&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;示例&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;含义&lt;/th&gt;
+&lt;th</summary>
+        
+      
+    
+    
+    
+    <category term="reverse" scheme="https://thestar0.icu/categories/reverse/"/>
+    
+    
+    <category term="reverse" scheme="https://thestar0.icu/tags/reverse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>房屋出租系统</title>
+    <link href="https://thestar0.icu/3f7d2995.html"/>
+    <id>https://thestar0.icu/3f7d2995.html</id>
+    <published>2022-03-13T07:29:32.000Z</published>
+    <updated>2022-04-17T12:25:35.104Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;房屋出租系统项目&lt;/h1&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="java" scheme="https://thestar0.icu/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第四宇宙</title>
+    <link href="https://thestar0.icu/f312d95.html"/>
+    <id>https://thestar0.icu/f312d95.html</id>
+    <published>2022-03-07T01:51:30.000Z</published>
+    <updated>2022-04-14T04:24:44.031Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这是一段蓄意已久送给未来的自己的一段咬文爵字&lt;/p&gt;
+&lt;p&gt;现在发现，原来自己是想被自己认可罢了，打不赢时间，打不赢自己吗&lt;/p&gt;
+&lt;p&gt;3月7日凌晨，刷着一位进入某大厂的面经(这算第几十次刷面经吧)&lt;/p&gt;
+&lt;p&gt;不禁回想着，这半年都学了什么，到底想走或该走那个方向，到底</summary>
+        
+      
+    
+    
+    
+    <category term="杂记" scheme="https://thestar0.icu/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="杂记" scheme="https://thestar0.icu/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java面向对象（高级）</title>
+    <link href="https://thestar0.icu/b0f32898.html"/>
+    <id>https://thestar0.icu/b0f32898.html</id>
+    <published>2022-03-03T16:37:11.000Z</published>
+    <updated>2022-04-15T12:09:27.581Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;类变量和类方法&lt;/h1&gt;
+&lt;h2 id=&quot;为什么需要类变量&quot;&gt;为什么需要类变量&lt;/h2&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://thestar0.icu/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://thestar0.icu/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>零钱通项目</title>
+    <link href="https://thestar0.icu/a872b2c2.html"/>
+    <id>https://thestar0.icu/a872b2c2.html</id>
+    <published>2022-03-03T16:28:49.000Z</published>
+    <updated>2022-04-14T03:43:25.853Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;零钱通项目&lt;/h1&gt;
+&lt;h2 id=&quot;项目流程&quot;&gt;项目流程&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;化繁为简&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先完成显示菜单，并可以选择菜单，给出对应的提示&lt;/p&gt;
+&lt;ol</summary>
+        
+      
+    
+    
+    
+    
+    <category term="java" scheme="https://thestar0.icu/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手机优质app</title>
+    <link href="https://thestar0.icu/e563b268.html"/>
+    <id>https://thestar0.icu/e563b268.html</id>
+    <published>2022-02-21T14:53:45.000Z</published>
+    <updated>2022-04-14T04:25:12.397Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="软件" scheme="https://thestar0.icu/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="软件" scheme="https://thestar0.icu/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>雷军的大学创业失败经历</title>
+    <link href="https://thestar0.icu/47ac6548.html"/>
+    <id>https://thestar0.icu/47ac6548.html</id>
+    <published>2022-02-17T11:32:01.000Z</published>
+    <updated>2022-04-14T04:24:41.666Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近又非常迷茫，不知道干什么，于是乎看起了书，《硅谷之火》《一往无前》&lt;/p&gt;
+&lt;p&gt;下面为最近看见的雷总的大学创业失败经历，想起了硅谷之火里面的乔布斯&lt;/p&gt;
+&lt;p&gt;看完属于那个年代的故事，颇感亢奋&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;我</summary>
+        
+      
+    
+    
+    
+    <category term="杂记" scheme="https://thestar0.icu/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="故事" scheme="https://thestar0.icu/tags/%E6%95%85%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VNCTF2022公开赛wp</title>
+    <link href="https://thestar0.icu/5638e77f.html"/>
+    <id>https://thestar0.icu/5638e77f.html</id>
+    <published>2022-02-17T09:54:01.000Z</published>
+    <updated>2022-04-14T04:25:47.514Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;Reverse&lt;/h1&gt;
+&lt;h2 id=&quot;1-Babymaze&quot;&gt;1. Babymaze&lt;/h2&gt;
+&lt;p&gt;顾名思义，迷宫题&lt;/p&gt;
+&lt;p&gt;下载文件后发现是一个pyc文件&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="比赛wp" scheme="https://thestar0.icu/categories/%E6%AF%94%E8%B5%9Bwp/"/>
+    
+    
+    <category term="CTF" scheme="https://thestar0.icu/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java面向对象（中级）</title>
+    <link href="https://thestar0.icu/74e9e141.html"/>
+    <id>https://thestar0.icu/74e9e141.html</id>
+    <published>2022-02-11T11:06:44.000Z</published>
+    <updated>2022-04-17T12:20:17.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;包&lt;/h1&gt;
+&lt;h2 id=&quot;包的三大作用&quot;&gt;包的三大作用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;区别相同名字的类&lt;/li&gt;
+&lt;li&gt;当类很多时，可以很好的管理类&lt;/li&gt;
+&lt;li&gt;控制访问范围&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://thestar0.icu/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://thestar0.icu/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java面向对象(初级)</title>
+    <link href="https://thestar0.icu/36352759.html"/>
+    <id>https://thestar0.icu/36352759.html</id>
+    <published>2022-01-30T10:28:12.000Z</published>
+    <updated>2022-04-17T12:17:11.740Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;面向对象(初级)（oop）&lt;/h1&gt;
+&lt;p&gt;类（程序员自己定义的数据类型）&lt;/p&gt;
+&lt;p&gt;通过类可以创建各种各样的对象&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="java" scheme="https://thestar0.icu/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://thestar0.icu/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo搭建博客</title>
+    <link href="https://thestar0.icu/b37651.html"/>
+    <id>https://thestar0.icu/b37651.html</id>
+    <published>2022-01-20T13:56:11.000Z</published>
+    <updated>2022-04-14T04:25:28.095Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;hexo博客搭建日志&lt;/h1&gt;
+&lt;h2 id=&quot;博客概述&quot;&gt;博客概述&lt;/h2&gt;
+&lt;p&gt;什么是博客（下面是百度百科的答案）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic.imgdb.cn/item/61e649572ab3f51d91d8734d.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://thestar0.icu/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="hexo" scheme="https://thestar0.icu/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建网站如此easy</title>
+    <link href="https://thestar0.icu/ae9a7e33.html"/>
+    <id>https://thestar0.icu/ae9a7e33.html</id>
+    <published>2022-01-16T11:38:36.000Z</published>
+    <updated>2022-04-14T04:25:32.999Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;拥有一个自己的网站&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;相信任何人都曾想拥一个属于自己的网站吧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://thestar0.icu/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="网站" scheme="https://thestar0.icu/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+</feed>
